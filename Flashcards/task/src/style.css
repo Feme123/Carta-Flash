@@ -1,0 +1,51 @@
+h1 {
+    font-family: Arial, sans-serif;
+    text-effect: outline;
+    color: greenyellow;
+    text-align: center;
+}
+
+body {
+    background: url("https://cdn.mos.cms.futurecdn.net/mYgGsgUeqbMMYbZbTK7uP6-1200-80.jpg");
+}
+
+.flashcard-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 35%;
+    margin-right: 35%;
+    /*align-content: center;*/
+}
+
+.flashcard {
+    font-family: Arial, serif;
+    width: 100px;
+    height: 100px;
+    background-color: peachpuff;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px;
+    transform-style: preserve-3d;
+    transition: all 1s linear;
+}
+.front, .back {
+    position: center;
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+.flashcard:hover {
+    transform: rotateY(180deg);
+}
+
+
